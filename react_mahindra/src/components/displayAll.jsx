@@ -13,6 +13,12 @@ class DisplayAllComponent extends Component {
         })
     }
 
+    deleteEmployee=(id)=>{
+        EmployeeService.deleteEmployeeRecord(id).then(result=>{
+            this.setState({employees:this.state.employees.filter(emp=>emp.email!==id)});
+        })
+    }
+
     render() { 
         return <div>
             <table border="5">
@@ -32,6 +38,7 @@ class DisplayAllComponent extends Component {
                                 <td>{emp1.password}</td>
                                 <td>{emp1.email}</td>
                                 <td>{emp1.address}</td>
+                                <td><button onClick={()=>this.deleteEmployee(emp1.email)}>Delete</button></td>
                             </tr>
                             )
                     }
