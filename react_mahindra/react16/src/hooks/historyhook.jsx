@@ -1,11 +1,12 @@
 import { useHistory } from "react-router-dom";
 
  
-function HistoryHook() {
+function HistoryHook(props) {
   const history = useHistory();
  
   const handleGoBack = () => {
-    history.goBack();
+    //history.goBack();
+    props.history.go(-1);
   };
   return (
     <>

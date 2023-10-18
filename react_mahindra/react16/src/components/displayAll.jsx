@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EmployeeService from "../services/EmployeeService";
+import {Prompt} from 'react-router-dom';
 class DisplayAllComponent extends Component {
 
     state={
@@ -29,6 +30,10 @@ class DisplayAllComponent extends Component {
 
     render() { 
         return <div>
+            <Prompt
+            when={this.state.name}
+            message={location => `Are you sure you want to go to ${location.pathname}`}
+          />
             <table border="5">
                 <thead>
                     <tr>

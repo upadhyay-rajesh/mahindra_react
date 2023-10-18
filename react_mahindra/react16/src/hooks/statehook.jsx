@@ -14,10 +14,10 @@ function StateHooks() {
     const [address, setAddress]=useState("Bangalore");
 
     useEffect(()=>{
-        EmployeeService.getAllEmployeeRecord().then(result=>{
+      /*  EmployeeService.getAllEmployeeRecord().then(result=>{
            setEmployee({email:result.data.email});
             console.log(result.data);
-        })
+        })*/
     }
     )
 
