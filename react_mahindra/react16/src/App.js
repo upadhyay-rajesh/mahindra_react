@@ -9,7 +9,7 @@ import HomeComponent from './components/home';
 import ViewComponent from './components/view';
 import EditComponent from './components/edit';
 
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 class App extends Component {
   
@@ -23,7 +23,7 @@ class App extends Component {
             <Route path="/register" exact component={RegisterComponent}></Route>
             <Route path="/login" exact component={LoginComponent}></Route>
             <Route path="/displayAll" exact component={DisplayAllComponent}></Route>
-            <Route path="/viewEmployee/:id" exact component={ViewComponent}></Route>
+            <Route path="/viewEmployee/:id/:uname" exact component={ViewComponent}></Route>
             <Route path="/editEmployee/:id" exact component={EditComponent}></Route>
           </Switch>
         </div>
