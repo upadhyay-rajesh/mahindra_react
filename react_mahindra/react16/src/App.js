@@ -10,6 +10,9 @@ import ViewComponent from './components/view';
 import EditComponent from './components/edit';
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import StateHooks from './hooks/statehook';
+import HistoryHook from './hooks/historyhook';
+import UncontrolledComponent from './components/uncontrolled_component';
 
 class App extends Component {
   
@@ -28,6 +31,11 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
+
+      <StateHooks />
+      <HistoryHook />
+
+      <UncontrolledComponent />
     </div>
     )
   }

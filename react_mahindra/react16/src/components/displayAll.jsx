@@ -8,7 +8,7 @@ class DisplayAllComponent extends Component {
 
     componentDidMount(){
         EmployeeService.getAllEmployeeRecord().then(result=>{
-            console.log(result);
+           // console.log(result);
             this.setState({employees:result.data});
         })
     }
